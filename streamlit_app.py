@@ -1,11 +1,36 @@
 import streamlit as st
 
-selected_options = st.multiselect("Select one or more options:",
-    ['A', 'B', 'C'])
+cols = st.columns(3)
 
-all_options = st.button("Select all options")
+with cols[0]:
+    st.header('Option 1')
+    selected_options = st.multiselect("Select one or more options:",
+        ['A', 'B', 'C'])
+    
+    all_options = st.button("Select all options")
+    
+    if all_options:
+        selected_options = ['A', 'B', 'C']
+    
+    selected_options
 
-if all_options:
-    selected_options = ['A', 'B', 'C']
+with cols[1]:
+    st.header('Option 2')
+    selected_option_2 = st.multiselect("Select one or more options:",['A', 'B', 'C', 'All'])
 
-selected_options
+    if "All" in selected_option_2:
+        selected_option_2 = ['A', 'B', 'C']
+    
+    selected_option_2
+
+with cols[2]:
+    st.header('Option 3')
+    container = st.container()
+    all = st.button("Select all")
+     
+    if all:
+        selected_options = container.multiselect("Select one or more options:",
+             ['A', 'B', 'C'],['A', 'B', 'C'])
+    else:
+        selected_options =  container.multiselect("Select one or more options:",
+            ['A', 'B', 'C'])

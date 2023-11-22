@@ -29,8 +29,8 @@ with cols[2]:
     all = st.button("Select all")
      
     if all:
-        selected_options = container.multiselect("Select one or more options:",
+        selected_options_3 = container.multiselect("Select one or more options:",
              ['A', 'B', 'C'],['A', 'B', 'C'])
     else:
-        selected_options =  container.multiselect("Select one or more options:",
+        selected_options_3 =  container.multiselect("Select one or more options:",
             ['A', 'B', 'C'])

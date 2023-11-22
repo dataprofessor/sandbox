@@ -1,5 +1,11 @@
 import streamlit as st
 
-st.title('🎈 App Name')
+selected_options = st.multiselect("Select one or more options:",
+    ['A', 'B', 'C'])
 
-st.write('Hello world!')
+all_options = st.button("Select all options")
+
+if all_options:
+    selected_options = ['A', 'B', 'C']
+
+selected_options

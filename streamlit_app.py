@@ -5,7 +5,7 @@ cols = st.columns(3)
 with cols[0]:
     st.header('Option 1')
     selected_options = st.multiselect("Select one or more options:",
-        ['A', 'B', 'C'])
+        ['A', 'B', 'C'], key='option')
     
     all_options = st.button("Select all options")
     
@@ -16,7 +16,7 @@ with cols[0]:
 
 with cols[1]:
     st.header('Option 2')
-    selected_option_2 = st.multiselect("Select one or more options:",['A', 'B', 'C', 'All'])
+    selected_option_2 = st.multiselect("Select one or more options:",['A', 'B', 'C', 'All'], key='option_2')
 
     if "All" in selected_option_2:
         selected_option_2 = ['A', 'B', 'C']
@@ -30,7 +30,7 @@ with cols[2]:
      
     if all:
         selected_options_3 = container.multiselect("Select one or more options:",
-             ['A', 'B', 'C'],['A', 'B', 'C'])
+             ['A', 'B', 'C'],['A', 'B', 'C'], key='option_3')
     else:
         selected_options_3 =  container.multiselect("Select one or more options:",
-            ['A', 'B', 'C'])
+            ['A', 'B', 'C'], key='option_3')

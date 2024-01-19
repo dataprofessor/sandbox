@@ -39,7 +39,7 @@ with cols[2]:
 
 genre = st.radio(
     "What's your favorite movie genre",
-    [":rainbow[Comedy]", "***[Drama](http://www.google.com)***", "Documentary :movie_camera:"],
+    [":rainbow[Comedy]", "[Drama](http://www.google.com)", "Documentary :movie_camera:"],
     captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
 
 
